@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HitTriger : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class HitTriger : MonoBehaviour
         }
         if (collisionInfo.collider.tag == "Finish")
         {
-            movment.enabled = false;
+            SceneManager.LoadScene(0);
         }
     }
 }

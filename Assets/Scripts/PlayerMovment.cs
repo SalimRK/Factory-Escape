@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovment : MonoBehaviour
 {
@@ -40,6 +41,10 @@ public class PlayerMovment : MonoBehaviour
         {
             isMovingLeft = false;
             isMovingRight = false;
+        }
+        if (Input.GetKey("p"))
+        {
+            SceneManager.LoadScene(0);
         }
 
         UpdateAnimation();
